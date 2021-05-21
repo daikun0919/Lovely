@@ -1,12 +1,6 @@
 <div class="contents row">
   <div class="container">
     <h3>編集する</h3>
-    <%= form_with(model: @tweet, local: true) do |form| %>
-      <%= form.text_field :name, placeholder: "Name" %>
-      <%= form.text_field :image, placeholder: "Image Url" %>
-      <%= form.text_area :text, placeholder: "What's happening", rows: "10" %>
-      <%= form.text_field :location, placeholder: "Add location" %>
-      <%= form.submit "SEND" %>
-    <% end %>
+      <%= render partial: "form", locals: { tweet: @tweet } %>
   </div>
 </div>
